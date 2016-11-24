@@ -13,6 +13,13 @@
      <script type="text/javascript" src="http://npr.github.io/responsiveiframe/js/jquery.responsiveiframe.js"></script>
 <head>
     <script>
+        function hostAlert(message)
+        {
+            var strObj = {"type:":"alert","message":message};
+            console.log(strObj);
+            console.log(JSON.stringify(strObj));
+            parent.postMessage(JSON.stringify(strObj),"*");
+        }
     </script>
 </head>
 <body>
