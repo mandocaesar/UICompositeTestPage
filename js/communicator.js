@@ -1,5 +1,6 @@
 function onMessage(messageEvent) {
-				alert(messageEvent.data);
+    console.log(messageEvent);
+				//alert(messageEvent.data);
 			}
 var windowProxy;
 window.onload=function(){ 
