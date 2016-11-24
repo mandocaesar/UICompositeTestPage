@@ -16,8 +16,9 @@
      <script type="text/javascript" src="http://npr.github.io/responsiveiframe/js/jquery.responsiveiframe.js"></script>
 <head>
     <script>
-        function hostAlert(message)
+        function hostAlert()
         {
+            var message = $("#messageTest").val();
             var strObj = {"type:":"alert","message":message};
             console.log(strObj);
             console.log(JSON.stringify(strObj));
@@ -30,15 +31,17 @@
         ir = responsiveIframe();
         ir.allowResponsiveEmbedding();  
     </script>
-    <div class="row">
-        <div class="col-2">
-            <span>Message</span>
-        </div>
-        <div class="col-2">
-            <input type="text" id="messageTest"/>
-        </div>
-        <div class="col-2">
-            <span class="btn btn-success">Send Message</span>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <span>Message</span>
+            </div>
+            <div class="col-2">
+                <input type="text" id="messageTest"/>
+            </div>
+            <div class="col-2">
+                <span class="btn btn-success" onclick="hostAlert();">Send Message</span>
+            </div>
         </div>
     </div>
 </body>
